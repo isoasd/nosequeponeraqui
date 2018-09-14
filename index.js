@@ -103,7 +103,9 @@ bot.on("message", async message => {
     		const at = "@";
 		if(message.content.includes("squad")){
 		message.delete();
-        	message.channel.send(at + "scrimmer")
+    if (message.member.hasPermission("MENTION_EVERYONE")) {
+        message.channel.send(at + "here")
+    }
 		message.channel.send("------------------------------------------");
 		let servericon = bot.user.displayAvatarURL;
 		let hosticon = message.author.displayAvatarURL;
