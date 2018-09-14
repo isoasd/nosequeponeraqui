@@ -100,12 +100,8 @@ bot.on("message", async message => {
 		}
 	}
 	if(message.channel.id === "490054558232477716" && message.member.roles.find(r => r.name === "Scrim Staff")){
-    		const at = "@";
 		if(message.content.includes("squad")){
 		message.delete();
-    if (message.member.hasPermission("MENTION_EVERYONE")) {
-        message.channel.send(at + "here")
-    }
 		message.channel.send("------------------------------------------");
 		let servericon = bot.user.displayAvatarURL;
 		let hosticon = message.author.displayAvatarURL;
