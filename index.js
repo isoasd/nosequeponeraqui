@@ -103,14 +103,59 @@ bot.on("message", async message => {
 		if(message.content.includes("squad")){
 		message.delete();
 		message.channel.send("------------------------------------------");
+		message.channel.send("@everyone")
 		let servericon = bot.user.displayAvatarURL;
 		let hosticon = message.author.displayAvatarURL;
 		let announcement = new Discord.RichEmbed()
-		.setTitle("Announcement!")
+		.setTitle("ATENCION PROXIMO SCRIM SQUAD!")
 		.setThumbnail(servericon)
-		.setDescription("**Join Snipe Countdown in 10 Minutes!**")
-		.addField("Snipes are starting soon!", "*Be sure to join the talk channel!*", true)
-		.setFooter("Please be ready", hosticon)
+		.setDescription("**Unanse al siguiente scrim en 10 Minutes!**")
+		.addField("El scrim comenzara muy pronto!", "*Asegurate de estar en el canal SINC!*", true)
+		.setFooter("Por favor este listo", hosticon)
+		.setTimestamp()
+		.setColor(16760937);
+			
+		await message.channel.send(announcement);
+			
+		message.channel.send("------------------------------------------");
+		}
+	   
+	   }
+if(message.channel.id === "490054558232477716" && message.member.roles.find(r => r.name === "Scrim Staff")){
+		if(message.content.includes("duo")){
+		message.delete();
+		message.channel.send("------------------------------------------");
+		message.channel.send("@everyone")
+		let servericon = bot.user.displayAvatarURL;
+		let hosticon = message.author.displayAvatarURL;
+		let announcement = new Discord.RichEmbed()
+		.setTitle("ATENCION PROXIMO SCRIM DUO!")
+		.setThumbnail(servericon)
+		.setDescription("**Unanse al siguiente scrim en 10 Minutes!**")
+		.addField("El scrim comenzara muy pronto!", "*Asegurate de estar en el canal SINC!*", true)
+		.setFooter("Por favor este listo", hosticon)
+		.setTimestamp()
+		.setColor(16760937);
+			
+		await message.channel.send(announcement);
+			
+		message.channel.send("------------------------------------------");
+		}
+	   
+	   }
+if(message.channel.id === "490054558232477716" && message.member.roles.find(r => r.name === "Scrim Staff")){
+		if(message.content.includes("solo")){
+		message.delete();
+		message.channel.send("------------------------------------------");
+		message.channel.send("@everyone")
+		let servericon = bot.user.displayAvatarURL;
+		let hosticon = message.author.displayAvatarURL;
+		let announcement = new Discord.RichEmbed()
+		.setTitle("ATENCION PROXIMO SCRIM SOLO!")
+		.setThumbnail(servericon)
+		.setDescription("**Unanse al siguiente scrim en 10 Minutes!**")
+		.addField("El scrim comenzara muy pronto!", "*Asegurate de estar en el canal SINC!*", true)
+		.setFooter("Por favor este listo", hosticon)
 		.setTimestamp()
 		.setColor(16760937);
 			
