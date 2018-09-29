@@ -748,7 +748,7 @@ if(message.channel.id === "490054558232477716" && message.member.roles.find(r =>
 		for(const codeRoles of splitCodeRoles) {
 			let eb = new Discord.RichEmbed().setColor(16776960).setTitle("Informacion del juego").setFooter(`[Live] con ${allCodeRoles.length} matches.`);
 			for(const role of codeRoles) {
-				const membersString = role.members.map(m => m.user.tag).join("\n");
+				const membersString = role.members.map(m => m.username).join("\n");
 				eb.addField(`ID: ${role.name}`, membersString, true);
 			}
 			let last3chan = message.guild.channels.find(`name`, "scrim-last3");
